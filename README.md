@@ -2,7 +2,7 @@
 数据打包方法。
 # 案例
 
-```
+```php
 include 'AuthCode.php';
 
 $pack = AuthCode::pack([
