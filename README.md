@@ -7,6 +7,7 @@
 ```php
 include 'AuthCode.php';
 
+//打包数据，获得串
 $pack = AuthCode::pack([
     'name' => 'wolferhua',
     'mail' => '358273385@qq.com',
@@ -17,7 +18,7 @@ $pack = AuthCode::pack([
 echo $pack . PHP_EOL;
 //e3Z6sGiJJAkhIiIcImlJdHEiOBJObTCwUyN0MEZNTGIwMGUwSWRhbUgwSk5VME16VVkwanh6TVdnMVFsRngwbWp2YnlJczR6NWhiV29pT2lKM2IyY3paWEpvZFdFaUxDSnpaWGdpT2lKdFlXNGlMQ0p6YVhSbElqb2lhSFIwY0RwY0wxd3ZkM2QzTG1oaGMyaHRiM0F1WTI5dFhDOGlmUSIsInNpZ24iOiI3OWMwNjM4NzIwNDJhZmEyNjI3ZDFmYzYwMjhkZmVkNyIsInRpbWVzdGFtcCI6MTUxMDIxMTc2OX0
 
-
+//解包串
 $data = AuthCode::unpack($pack);
 var_dump($data);
 /**
@@ -42,6 +43,7 @@ array(4) {
 }
 
 */
+//解包串，获得原始数据。
 $data = AuthCode::getDataByPack($pack);
 var_dump($data);
 /**
